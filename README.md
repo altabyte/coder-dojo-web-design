@@ -1,6 +1,8 @@
 # Coder Dojo - Web Design
 
-HTML CSS web design tutorial for [Coder Dojo Belfast](http://www.coderdojobelfast.com/)
+HTML CSS [web design tutorial](http://altabyte.github.io/coder-dojo-web-design/) for [Coder Dojo Belfast](http://www.coderdojobelfast.com/)
+
+[http://altabyte.github.io/coder-dojo-web-design/](http://altabyte.github.io/coder-dojo-web-design/)
 
 ## Setup
 
