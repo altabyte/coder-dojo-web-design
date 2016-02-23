@@ -1,0 +1,170 @@
+---
+---
+@import url(https://fonts.googleapis.com/css?family=Metrophobic);
+@import url(https://fonts.googleapis.com/css?family=Bad+Script);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+
+$background-color: #080808;
+$text-blue:  #1d74f5;
+$text-white: #FFFFFF;
+$text-grey:  #999999;
+$text-grey-dark: #5c5c5c;
+
+$github-color: #829AA8;
+$google-plus-color: #d34836;
+$linkedin-color: #007AB9;
+$facebook-color: #3b5998;
+$twitter-color: #55acee;
+
+$transition-time: 0.3s;
+
+body {
+  position: relative;
+  background-color: $background-color;
+  color: $text-grey;
+  font-family: 'Metrophobic', sans-serif;
+}
+
+h1 {
+  color: $text-blue;
+}
+
+footer {
+  min-height: 120px;
+}
+
+.navbar {
+  min-height: 50px;
+  background-color: #000000;
+
+  .navbar-brand {
+    color: darken($text-white, 20%);
+
+    .tag {
+      display: inline-block;
+      padding: 0 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.8em;
+    }
+
+    -webkit-transition: $transition-time ease-in-out;
+    -moz-transition: $transition-time ease-in-out;
+
+    &:hover {
+      color: $text-white;
+      font-size: 1.8em;
+    }
+  }
+}
+
+.navbar-default {
+  border-color: #000000;
+
+  .navbar-nav>li>a {
+    color: white;
+
+    -webkit-transition: $transition-time ease-in-out;
+    -moz-transition: $transition-time ease-in-out;
+
+    &:hover {
+      color: $text-blue;
+    }
+  }
+}
+
+
+#home {
+  .container {
+    max-width: 992px;
+    position: relative;
+  }
+
+  nav.social-media {
+    margin: 32px 0;
+    font-size: 32px;
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      display: inline-block;
+      padding: 10px;
+      text-align: center;
+
+
+      a {
+        display: inline-block;
+        padding-top: 3px;
+        width: 50px;
+        height: 50px;
+        background-color: $text-blue;
+        color: white;
+        border-radius: 50%;
+        -webkit-transition: $transition-time ease-in-out;
+        -moz-transition: $transition-time ease-in-out;
+      }
+      a.facebook:hover  {
+        background-color: $facebook-color;
+      }
+      a.github:hover {
+        background-color: $github-color;
+      }
+      a.google-plus:hover {
+        background-color: $google-plus-color;
+      }
+      a.linkedin:hover {
+        background-color: $linkedin-color;
+      }
+      a.twitter:hover {
+        background-color: $twitter-color;
+      }
+    }
+  }
+}
+
+
+
+@media print, screen and (min-width: 500px) {
+  #things-i-do {
+    .lists {
+      position: relative;
+      max-width: 450px;
+      display: block;
+      margin: 0 auto;
+
+      ul {
+        width: 45%;
+      }
+
+      ul:first-child {
+        margin-right: 100px;
+        li {
+          text-align: left;
+        }
+      }
+
+      ul:last-child {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        li {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  #home {
+    
+  }
+}
+
+@media print, screen and (min-width: 992px) {
+  #home {
+    
+  }
+}
