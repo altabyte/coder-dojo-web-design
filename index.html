@@ -4,7 +4,68 @@
 <html lang="en">
 {% include head.html title="Web Design - Coder Dojo" description="Web design tutorial for Belfast Coder Dojo." %}
 <body>
-<h1>Coder Dojo &ndash; Web Design</h1>
+<div class="container">
+    {% include header.html %}
+    <div class="row">
+        {% include section_nav.html %}
+
+        <article class="col-sm-9">
+            <section>
+                <h1>Introduction to web design</h1>
+                <h2>What is web design?</h2>
+                <p>
+                    Web design is the art of creating content for the internet. In this Coder Dojo course you will
+                    create your own personal web site that you can add to the internet and show to your friends. To
+                    create a web site you will need to know both <strong>HTML</strong> and <strong>CSS</strong>.
+                    <acronym title="Hypertext markup language">HTML</acronym> and <acronym
+                        title="cascading style sheets">CSS</acronym> are the language of the <strong>World Wide
+                    Web</strong> and browsers, such as <a href="http://www.google.co.uk/chrome/" target="_blank">Google
+                    Chrome</a>, <a href="https://www.apple.com/uk/safari/" target="_blank">Safari</a>, <a
+                        href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> and <a
+                        href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Internet
+                    Explorer</a> use it to display the pages you see when you surf the web.
+                </p>
+
+                <h2>What is HTML and CSS?</h2>
+                <p>
+                    When building a web page you will need to create 2 files. Firstly you will need to create a HTML
+                    file and this will contain all the text and data to be displayed on the web page. If you are going
+                    to create a web page about your favourite food, then you would probably want to have some paragraphs
+                    describing the food, a list of the ingredients, some photographs and perhaps a <a
+                        href="http://www.youtube.com" target="_blank">Youtube</a> video of how you made it. All of this
+                    information will need to be added to your HTML file using <strong>tags</strong> to structure it in a
+                    way that a browser can understand.
+                </p>
+                <p>
+                    Once you have all the information saved in your HTML file you can open and read it in your web
+                    browser. At this point it will just be black text on a white background. But that doesn't look very
+                    pretty. To personalise your web page with <a href="http://www.w3schools.com/tags/ref_colornames.asp"
+                                                                 target="_blank">colours</a> and <a
+                        href="http://www.google.com/fonts" target="_blank">fonts</a> you will need to add a CSS <strong>stylesheet</strong>.
+                    You will then need to create a single CSS file and link that to all your HTML web pages so that your
+                    entire web site has a consistent theme.
+                </p>
+
+                <div id="theme-selector">
+                    <a class="select-spongebob" href="javascript::">Spongebob</a>
+                    <a class="select-gaming" href="javascript::">Gaming</a>
+                    <a class="select-coder-dojo" href="javascript::">Coder Dojo</a>
+                </div>
+
+                <p>
+                    So how does the CSS file influence a web page? Can I change how this page looks by editing its CSS
+                    file? Try clicking on the buttons above. Doing so will change the CSS file connected to this web
+                    page. As you can see the formatting and layout of a web page is defined by its CSS file.
+                </p>
+                <p>
+                    To begin creating your own web pages, lets jump to the <a class="show-page-2" href="javascript::">next
+                    section...</a>
+                </p>
+            </section>
+        </article>
+    </div>
+{% include footer.html %}
+</div>
 </body>
 </html>
 
