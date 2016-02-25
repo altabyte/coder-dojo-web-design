@@ -5,10 +5,15 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif);*/
 
 @import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 $background-color: #FFFFFF;
 $purple: #363446;
 $red: #ec2524;
+$text-color: #4d5259;
+$link-color: #2724ec;
+$silver: #c0c0c0;
+
 $text-blue:  #1d74f5;
 $text-white: #FFFFFF;
 $text-grey:  #999999;
@@ -25,8 +30,11 @@ $transition-time: 0.3s;
 body {
   position: relative;
   background-color: $background-color;
-  color: $text-grey;
-  font-family: 'Metrophobic', sans-serif;
+  color: $text-color;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.03rem;
+  line-height: 2;
 }
 
 header {
@@ -69,11 +77,44 @@ header {
 }
 
 h1 {
-  color: $text-blue;
+  color: $red;
+  margin: 1em 0 1.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
+strong {
+  color: $red;
+  font-weight: bold;
+}
+
+a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-color;
+    text-decoration: underline;
+  }
 }
 
 footer {
-  min-height: 120px;
+  position: relative;
+  font-style: italic;
+  font-size: 0.8em;
+  background-color: #FFFFFF;
+  padding: 3px;
+  width: 100%;
+  border-top: 1px solid $silver;
+  text-align: center;
+
+  a {
+    color: $silver;
+
+    &:hover {
+      color: darken($silver, 10%);
+      text-decoration: none;
+    }
+  }
 }
 
 
