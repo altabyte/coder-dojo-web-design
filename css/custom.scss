@@ -72,31 +72,18 @@ footer {
   min-height: 120px;
 }
 
-/* make sidebar nav vertical */
-@media (min-width: 768px) {
-  .sidebar-nav .navbar .navbar-collapse {
-    padding: 0;
-    max-height: none;
-  }
-  .sidebar-nav .navbar ul {
-    float: none;
-  }
-  .sidebar-nav .navbar ul:not {
-    display: block;
-  }
-  .sidebar-nav .navbar li {
-    float: none;
-    display: block;
-  }
-  .sidebar-nav .navbar li a {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-}
-
 
 @media print, screen and (min-width: 500px) {
 
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  header, .sidebar-nav {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 
 
@@ -110,6 +97,31 @@ footer {
       max-width: 250px;
       max-height: 50px;
       margin: 18px 32px;
+    }
+  }
+
+  .sidebar-nav {
+    .navbar {
+      .navbar-collapse {
+        padding: 0;
+        max-height: none;
+      }
+      ul {
+        float: none;
+
+        /*&:not {
+          display: block;
+        }*/
+      }
+
+      li {
+        float: none;
+        display: block;
+      }
+      li a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
     }
   }
 }
