@@ -1,10 +1,14 @@
 ---
 ---
-@import url(https://fonts.googleapis.com/css?family=Metrophobic);
+/*@import url(https://fonts.googleapis.com/css?family=Metrophobic);
 @import url(https://fonts.googleapis.com/css?family=Bad+Script);
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);*/
 
-$background-color: #080808;
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One);
+
+$background-color: #FFFFFF;
+$purple: #363446;
+$red: #ec2524;
 $text-blue:  #1d74f5;
 $text-white: #FFFFFF;
 $text-grey:  #999999;
@@ -23,6 +27,41 @@ body {
   background-color: $background-color;
   color: $text-grey;
   font-family: 'Metrophobic', sans-serif;
+}
+
+header {
+  position: relative;
+  height: 180px;
+  background-image: url('{{ site.baseurl }}/img/box-bot.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  h1 {
+    position: relative;
+    width: 100%;
+    padding: 6px;
+    text-align: center;
+    background-color: rgba($purple, 0.55);
+    font-family: 'Alfa Slab One', cursive;
+    color: white;
+    text-shadow: 2px 2px $red;
+    font-size: 18pt;
+  }
+
+  img.coder-dojo-logo {
+    display: block;
+    width: 150px;
+    margin: 12px auto;
+    text-align: center;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+
+    &:hover {
+      opacity: 1.0;
+      filter: alpha(opacity=100);
+    }
+  }
 }
 
 h1 {
@@ -56,139 +95,34 @@ footer {
 }
 
 
-
-.navbar {
-  min-height: 50px;
-  background-color: #000000;
-
-  .navbar-brand {
-    color: darken($text-white, 20%);
-
-    .tag {
-      display: inline-block;
-      padding: 0 4px;
-      font-family: 'Courier New', monospace;
-      font-size: 0.8em;
-    }
-
-    -webkit-transition: $transition-time ease-in-out;
-    -moz-transition: $transition-time ease-in-out;
-
-    &:hover {
-      color: $text-white;
-      font-size: 1.8em;
-    }
-  }
-}
-
-.navbar-default {
-  border-color: #000000;
-
-  .navbar-nav>li>a {
-    color: white;
-
-    -webkit-transition: $transition-time ease-in-out;
-    -moz-transition: $transition-time ease-in-out;
-
-    &:hover {
-      color: $text-blue;
-    }
-  }
-}
-
-
-#home {
-  .container {
-    max-width: 992px;
-    position: relative;
-  }
-
-  nav.social-media {
-    margin: 32px 0;
-    font-size: 32px;
-
-    ul {
-      list-style: none;
-    }
-
-    li {
-      display: inline-block;
-      padding: 10px;
-      text-align: center;
-
-
-      a {
-        display: inline-block;
-        padding-top: 3px;
-        width: 50px;
-        height: 50px;
-        background-color: $text-blue;
-        color: white;
-        border-radius: 50%;
-        -webkit-transition: $transition-time ease-in-out;
-        -moz-transition: $transition-time ease-in-out;
-      }
-      a.facebook:hover  {
-        background-color: $facebook-color;
-      }
-      a.github:hover {
-        background-color: $github-color;
-      }
-      a.google-plus:hover {
-        background-color: $google-plus-color;
-      }
-      a.linkedin:hover {
-        background-color: $linkedin-color;
-      }
-      a.twitter:hover {
-        background-color: $twitter-color;
-      }
-    }
-  }
-}
-
-
-
 @media print, screen and (min-width: 500px) {
-  #things-i-do {
-    .lists {
-      position: relative;
-      max-width: 450px;
-      display: block;
-      margin: 0 auto;
 
-      ul {
-        width: 45%;
-      }
-
-      ul:first-child {
-        margin-right: 100px;
-        li {
-          text-align: left;
-        }
-      }
-
-      ul:last-child {
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        li {
-          text-align: right;
-        }
-      }
-    }
-  }
 }
+
 
 @media print, screen and (min-width: 768px) {
-  #home {
-    
+  header {
+    h1 {
+      font-size: 26pt;
+     }
+
+    img.coder-dojo-logo {
+      max-width: 250px;
+      max-height: 50px;
+      margin: 18px 32px;
+    }
   }
 }
 
+
 @media print, screen and (min-width: 992px) {
-  #home {
-    
+  header {
+    h1 {
+      position: absolute;
+      margin: 0;
+      bottom: 20px;
+      padding: 6px 0 6px 120px;
+      text-align: left;
+    }
   }
 }
