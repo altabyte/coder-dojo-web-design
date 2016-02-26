@@ -10,8 +10,16 @@
         {% include section_nav.html %}
 
         <article class="col-sm-9">
+            <h1>Let's get started...</h1>
             <section>
-                <h2>Let's get started...</h2>
+                <h2>Create HTML &amp; CSS file</h2>
+                <p>
+                    Every web site starts with a HTML file, so let&rsquo;s create one. On your desktop there is a folder
+                    called <strong>BMC&nbsp;Applications</strong>.
+                    Open this folder and lanuch the editor called <strong>Notepad++</strong>.
+                    Then copy the following HTML content into <a href="http://notepad-plus-plus.org/" target="_blank">Notepad++</a>
+                    and save it as a file called <strong>index.html</strong>.
+                </p>
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -27,10 +35,35 @@
 </html>
 {% endhighlight %}
 
-```ruby
-# ...ruby code
-```
+                <p>
+                    All HTML files have 2 parts. At the top of the file is the <strong>&lt;head&gt;</strong> section
+                    and this contains instructions for the browser. In this case we have a page <strong>title</strong>
+                    and a <strong>link</strong> to the CSS stylesheet that we will create in a moment.
+                </p>
+                <p>
+                    The <strong>&lt;body&gt;</strong> section is where you will put all the text and images for your
+                    web page. We will add content here in a moment.
+                </p>
 
+                <p>
+                    To create your stylesheet file go the the File menu of Notepad++ and choose New. Then copy the
+                    following content into Notepad++ and save it as a file called <strong>style.css</strong>.
+                </p>
+{% highlight css %}
+body {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #B52C25;
+}
+{% endhighlight %}
+
+                <p>
+                    You have now created the blank template for your web site, so let's jump to the next section and
+                    add some content.
+                </p>
             </section>
         </article>
     </div>
