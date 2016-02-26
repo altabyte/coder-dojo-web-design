@@ -117,6 +117,32 @@ footer {
   }
 }
 
+article {
+  .nav {
+    margin: 28px 0 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-style: italic;
+    text-align: right;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.tip {
+  background-color: $purple;
+  color: #FFFFFF;
+  margin: 8px;
+  padding: 12px 6px 2px;
+  border-radius: 9px;
+  border: 1px solid #000000;
+  box-shadow: 1px 1px 6px #35393e;
+}
+
+
+
 
 @media print, screen and (min-width: 500px) {
 
