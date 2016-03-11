@@ -6,6 +6,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
 
 $background-color: #FFFFFF;
 $purple: #363446;
@@ -55,6 +56,12 @@ header {
     color: white;
     text-shadow: 2px 2px $red;
     font-size: 18pt;
+    -webkit-transition: $transition-time ease-in-out;
+    -moz-transition: $transition-time ease-in-out;
+
+    &:hover {
+      text-shadow: 4px 4px darken($red, 10%);
+    }
   }
 
   img.coder-dojo-logo {
@@ -97,6 +104,16 @@ a {
   }
 }
 
+i {
+  font-style: normal;
+  font-weight: bold;
+}
+
+abbr {
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
 footer {
   position: relative;
   font-style: italic;
@@ -124,6 +141,12 @@ article {
     font-weight: bold;
     font-style: italic;
     text-align: right;
+    -webkit-transition: $transition-time ease-in-out;
+    -moz-transition: $transition-time ease-in-out;
+
+    &:hover {
+      font-size: 1.4em;
+    }
   }
 }
 
@@ -132,6 +155,14 @@ article {
 }
 
 .tip {
+  h3 {
+    margin: 0;
+    padding: 0 0 24px;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Special Elite', cursive;
+  }
+
   background-color: $purple;
   color: #FFFFFF;
   margin: 8px;
