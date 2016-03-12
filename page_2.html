@@ -1,4 +1,5 @@
 ---
+page_number: 2
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +13,10 @@
         <article class="col-sm-9">
             <h1>Let's get started...</h1>
             <section>
-                <h2>Create HTML &amp; CSS file</h2>
+                <h2>Create a HTML file</h2>
                 <p>
-                    Every web site starts with a HTML file, so let&rsquo;s create one. On your desktop there is a folder
-                    called <strong>BMC&nbsp;Applications</strong>.
+                    Every web site starts with a HTML file, so let&rsquo;s create one. On your computer desktop there is a folder
+                    called <strong><abbr title="Belfast Metropolitan College">BMC</abbr>&nbsp;Applications</strong>.
                     Open this folder and lanuch the editor called <strong>Notepad++</strong>.
                     Then copy the following HTML content into <a href="http://notepad-plus-plus.org/" target="_blank">Notepad++</a>
                     and save it as a file called <strong>index.html</strong>.
@@ -34,6 +35,7 @@
 </body>
 </html>
 {% endhighlight %}
+                <div class="filename">index.html</div>
 
                 <p>
                     All HTML files have 2 parts. At the top of the file is the <strong>&lt;head&gt;</strong> section
@@ -45,6 +47,7 @@
                     web page. We will add content here in a moment.
                 </p>
 
+                <h2>Create a CSS file</h2>
                 <p>
                     To create your stylesheet file go the the File menu of Notepad++ and choose New. Then copy the
                     following content into Notepad++ and save it as a file called <strong>style.css</strong>.
@@ -59,14 +62,139 @@ h1, h2, h3, h4, h5, h6 {
   color: #B52C25;
 }
 {% endhighlight %}
-
+                <div class="filename">style.css</div>
                 <p>
                     You have now created the blank template for your web site, so let's jump to the next section and
                     add some content.
                 </p>
             </section>
+
+
+            <section>
+                <a name="tags"></a>
+                <h2>Tags</h2>
+                <p>
+                    Before we begin we need to understand the concept of <strong>tags</strong>. Tags are fundamental to HTML and are special keywords that <i>wrap</i> elements of your content so the browser knows what to do with them. In fact you have already created several tags in your HTML. Tags generally have the following format:
+
+                <div class="highlight-box" style="text-align: center;font-size: 2em; margin-bottom: 20px;font-family: 'Courier New', cursive;">
+                    <b>&lt;tagname&gt;</b><i>content</i><b>&lt;<span style="">/</span>tagname&gt;</b>
+                </div>
+
+                <ul>
+                    <li>HTML tags normally come in <strong>pairs</strong> like &lt;p&gt; and &lt;/p&gt;</li>
+                    <li>The first tag in a pair is the <strong>opening tag</strong>, the second tag is the <strong>closing tag</strong></li>
+                    <li>The closing tag is written like the start tag, but with a slash <strong>/</strong> before the <strong>tag name</strong></li>
+                </ul>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p class="center">
+                        If your content does not look right, you have probably forgotten to include the closing tag
+                    </p>
+                </div>
+
+                </p>
+            </section>
+
+
+            <section>
+                <a name="content"></a>
+                <h2>Creating some content</h2>
+                <p>
+                    Text on a web page is generally made up of <strong>headings</strong> and <strong>paragraphs</strong>.
+                    Each HTML file should have a <i>single</i> <strong>&lt;h1&gt;</strong> tag as its page title.
+                    Your text content should be set in series of <strong>&lt;p&gt;</strong> paragraph tags.
+                    Sub-categories can be defined using <i>&lt;h2&gt;</i> through <i>&lt;h6&gt;</i> heading tags.
+                    The numbers in the heading tags refer to their importance, where 1 is the most important
+                    and 6 is the least. When we try this in a moment you will see the their size is linked to their importance.
+                    So let's try this in an example by adding the following code to the index.html inside body tags.
+                </p>
+{% highlight html %}
+<body>
+
+    <h1>This is the page title</h1>
+    <h2>This is sub-heading 2</h2>
+    <h3>This is sub-heading 3</h3>
+    <h4>This is sub-heading 4</h4>
+    <h5>This is sub-heading 5</h5>
+    <h6>This is sub-heading 6</h6>
+
+    <p>
+        This is a paragraph of text on my web page.
+    </p>
+
+</body>
+{% endhighlight %}
+                <p>
+                    Now open this file in your browser and see how it looks...<br>
+                    This is your first web page  &#9786;
+                </p>
+            </section>
+
+
+            <section>
+                <a name="lists"></a>
+                <h2>Lists</h2>
+                <p>
+                    Now that we know how to add text to our web page, let's customise it and add <strong>lists</strong> of information. There are 2 types of list, bullet point lists <strong>&lt;ul&gt;</strong> and numbered lists <strong>&lt;ol&gt;</strong>. Let's change the web page body as shown below.
+                </p>
+{% highlight html %}
+<h1>My first web page</h1>
+<p>I am so excited to be learning HTML and CSS at Coder Dojo.</p>
+
+<h2>What I know now</h2>
+<p>
+    I have developed this list of skills
+</p>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Adding images Google</li>
+</ul>
+
+<h2>My favourite foods</h2>
+<p>
+    Learning to create web pages makes me hungry.
+    So here is a list of my favourite foods.
+</p>
+<h3>Snacks</h3>
+<ol>
+    <li>Crisps</li>
+    <li>Biscuits</li>
+    <li>Coca Cola</li>
+</ol>
+<h3>Lunches</h3>
+<ol>
+    <li>Pizza</li>
+    <li>Baked beans</li>
+    <li>Sandwiches</li>
+</ol>
+{% endhighlight %}
+            </section>
+
+
+            <section>
+                <a name="images"></a>
+                <h2>Images and photographs</h2>
+                <p>
+                    <img src="http://www.disruptorcup.com/img/coderdojo-logo-new.png" width="100" style="float:right; margin: 0 10px 20px 35px;">
+                    No web page would be complete without images, so let's add some. These can be picture files stored on your computer or you can link to other image files already on the internet. To find an image go to <a href="https://www.google.co.uk/" target="_blank">Google</a> and search for a subject such as <i><a href="https://www.google.co.uk/search?q=spongebob&biw=1375&bih=810&source=lnms&tbm=isch&sa=X&ei=t1ZdVNCFBfHW7AbL8oGwCg&ved=0CAYQ_AUoAQ" target="_blank">spongebob</a></i> or <i><a href="https://www.google.co.uk/search?q=football&source=lnms&tbm=isch&sa=X&ei=F1ddVKaNIMjV7Aa1q4GwAg&ved=0CAgQ_AUoAQ&biw=1375&bih=810" target="_blank">football</a></i> then click on the <strong>Images</strong> link. Scroll down until you find an image you like then click on it. Then click on the <strong>View Image</strong> button to the right of the image to see it on its own. The browser address bar will now contain the URL pointing to the image and you should copy that by double clicking on it then pressing [Ctrl] [c] on your keyboard.
+                </p>
+{% highlight html %}
+<img src="http://www.disruptorcup.com/img/coderdojo-logo-new.png" width="200">
+{% endhighlight %}
+                <p>
+                    You add images to your page body using the <strong>&lt;img&gt;</strong> tag. Unlike previous tags this one does not need a closing tag!
+                    You simply provide the <strong>URL</strong> to the image and optional <strong>width</strong>.
+                </p>
+            </section>
+
+            <div class="nav">
+                <a href="{{ site.baseurl }}/page_3.html" class="next-page">Adding some style &#187;</a>
+            </div>
         </article>
     </div>
 </div>
+{% include footer.html %}
 </body>
 </html>

@@ -90,6 +90,10 @@ h1 {
   font-weight: bold;
 }
 
+h2 {
+  margin: 48px 0 18px;
+}
+
 strong {
   color: $red;
   font-weight: bold;
@@ -123,6 +127,7 @@ footer {
   width: 100%;
   border-top: 1px solid $silver;
   text-align: center;
+  margin-top: 88px;
 
   a {
     color: $silver;
@@ -152,6 +157,14 @@ article {
 
 .center {
   text-align: center;
+}
+
+.filename {
+  text-align: right;
+  margin-top: -44px;
+  padding: 2px 16px 2px 0;
+  font-family: 'Special Elite', cursive;
+  color: $text-grey;
 }
 
 .tip {
@@ -203,6 +216,8 @@ article {
   }
 
   .sidebar-nav {
+    margin-top: 48px;
+
     .navbar {
       .navbar-collapse {
         padding: 0;
