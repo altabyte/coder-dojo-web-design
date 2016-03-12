@@ -243,6 +243,11 @@ article {
   }
 }
 
+#contact-me form { max-width: 600px; padding: 0 18px; margin: auto; margin-bottom: 64px; }
+#contact-me form label { display: block; margin-top: 18px; }
+#contact-me form input[type=text], #contact-me form input[type=email], #contact-me form textarea { width: 100%; margin-bottom: 8px; }
+#contact-me form input[type=submit] { display: block; margin: auto; padding: 4px 24px; }
+
 
 @media print, screen and (min-width: 992px) {
   header {

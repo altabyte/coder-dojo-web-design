@@ -12,6 +12,67 @@ page_number: 5
 
         <article class="col-sm-9">
             <h1>Web forms</h1>
+            <section>
+                <h2>What is a web form?</h2>
+                <p>
+                    So far we have created lots of <i>static content</i>, but this does not allow users to interact with
+                    our web site. Perhaps we would like them to <i>upload</i> data or simply send us a message.
+                </p>
+                <p>
+                    Typically creating web forms requires us to have a programmable web server &ndash; which we don&rsquo;t have
+                    &ndash; but fortunately there is a <strong>cloud web service</strong> called
+                    <a href="http://formspree.io/" target="_blank">FormSpree</a> that can process the form for us and
+                    send us the details as an email. To proceed with this section you will need to have an accessible
+                    <strong>email address</strong>.
+                </p>
+                <h2>Contact Me form</h2>
+                <p>
+                    We are now going to create <i>contact me</i> web form that will allow our site visitors to send us
+                    message as an email. You can see an example of how it will look below.
+                </p>
+                <div id="contact-me">
+                    <form>
+                        <label for="contact-name">Your name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="Type your name here">
+                        <label for="contact-name">Your email address</label>
+                        <input type="email" name="_replyto" placeholder="Type your email address here">
+                        <label for="contact-name">Your message</label>
+                        <textarea name="message" rows="4" placeholder="Type your message here"></textarea>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+
+                <p>
+                    To create this form add the following HTML to your web page and change <strong>YOUR@EMAIL.COM</strong>
+                    on the first line to <strong>your own email address</strong>.
+                </p>
+
+{% highlight html %}
+<div id="contact-me">
+    <form action="////formspree.io/YOUR@EMAIL.COM" method="POST">
+        <label for="contact-name">Your name</label>
+        <input type="text" id="contact-name" name="name" placeholder="Type your name here">
+        <label for="contact-name">Your email address</label>
+        <input type="email" name="_replyto" placeholder="Type your email address here">
+        <label for="contact-name">Your message</label>
+        <textarea name="message" rows="8" placeholder="Type your message here"></textarea>
+        <input type="submit" value="Send">
+    </form>
+</div>
+{% endhighlight %}
+
+                <p>
+                    To make this form look more friendly we need to add the following <strong>CSS</strong> to our <strong>style.css</strong> file...
+                </p>
+
+{% highlight css %}
+#contact-me form { max-width: 600px; padding: 0 18px; margin: auto; margin-bottom: 64px; }
+#contact-me form label { display: block; margin-top: 18px; }
+#contact-me form input[type=text], #contact-me form input[type=email], #contact-me form textarea { width: 100%; margin-bottom: 8px; }
+#contact-me form input[type=submit] { display: block; margin: auto; padding: 4px 24px; }
+{% endhighlight %}
+
+            </section>
         </article>
     </div>
 </div>
