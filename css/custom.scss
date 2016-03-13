@@ -139,6 +139,15 @@ footer {
   }
 }
 
+pre {
+  overflow-x: auto;
+
+  code {
+    overflow-wrap: normal;
+    white-space: pre;
+  }
+}
+
 article {
   .nav {
     margin: 28px 0 40px;
