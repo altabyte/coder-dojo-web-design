@@ -12,6 +12,109 @@ page_number: 4
 
         <article class="col-sm-9">
             <h1>Adding more pages</h1>
+            <section>
+                <a name="links"></a>
+                <h2>Links</h2>
+                <p>
+                    Before creating multiple pages we must first understand the concept of <strong>links</strong>.
+                    Links are used to join pages together, allowing us to jump from one page to another.
+                </p>
+                <p>
+                    Have you ever wondered why it is called the web? Think about a spider&rsquo;s web.
+                    It is basically lots of little threads all linked together in an amazing pattern.
+                    Now think about the internet. The internet is simply a lot of HTML web pages that link to other HTML web pages.
+                    Surfing the web means moving from page to another page by clicking on these links. So let&rsquo;s add a link to our web page.
+                    Links are created using the <strong>&lt;a&gt;</strong> anchor tag. Here is how we would create a link to the
+                    <a href="http://www.coderdojobelfast.com/" target="_blank">Belfast Coder Dojo</a> web site.
+                </p>
+
+{% highlight html %}
+<a href="http://www.coderdojobelfast.com/">Coder Dojo Belfast</a>
+{% endhighlight %}
+
+                <p>
+                    Add this line to your page body, refresh the page and then click on it. If all goes to plan you should
+                    jump to the Belfast Coder Dojo home page. Now click on the browser's back button to see your page again.
+                    Try adding some more links to your page with different <strong>URL</strong>s in the anchor tag.
+                </p>
+            </section>
+
+            <section>
+                <a name="second-page"></a>
+                <h2>Creating more pages</h2>
+                <p>
+                    We have now created a single <i>web page</i>. However our ambition is to create a <i>web site</i>, which is
+                    basically a just collection of web pages. So let&rsquo;s create a second HTML file called <strong>page_2.html</strong>
+                    and pasting the same original content into it. Here it is again so you don't have to go back.
+                </p>
+
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page 2</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!-- Write more HTML content in the space below -->
+
+</body>
+</html>
+{% endhighlight %}
+                <div class="filename">page_2.html</div>
+
+                <p>
+                    To create a new file in NotePad++ go to the <span style="text-decoration: underline;">F</span>ile
+                    menu and select  <span style="text-decoration: underline;">N</span>ew. Copy the above block of HTML
+                    and save it as page_2, remembering to add the .html extension to the file.
+                </p>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p class="center">
+                        When creating internet files it is best not to have spaces in their names.<br>
+                        Use the underscore &nbsp; <i class="fa fa-quote-left"></i> <span style="font-family: 'Courier New';">_</span> <i class="fa fa-quote-right"></i> &nbsp;
+                        character to replace the spaces in file names.
+                    </p>
+                </div>
+
+                <p>
+                    Add some content to this page and then load it in your browser to check it looks as expected.
+                    Repeat this process to create all the pages for your site, sequentially naming the files 3, 4, 5...
+                </p>
+            </section>
+
+            <section>
+                <a name="linking-pages"></a>
+                <h2>Linking our pages</h2>
+                <p>
+                    Now that our site has multiple pages we need to add links to each of them, so we can jump from page
+                    to page. We shall do this by creating a <strong>&lt;nav&gt;</strong> section on each page
+                    and adding the links to this block.
+                </p>
+
+{% highlight html %}
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page_1.html">My photos</a></li>
+        <li><a href="page_2.html">My Games</a></li>
+        <li><a href="page_3.html">Contact</a></li>
+    </ul>
+</nav>
+{% endhighlight %}
+
+                <p>
+                    Generally this would be one of the first elements in the HTML body as it should appear near the top of your page body content.
+                    Shown above is an example of a navigation section that would be included on every page of your web site.
+                </p>
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p class="center">
+                        Web pages do not need to link to themselves, so for example, page_2 should not have a link to page_2.html
+                    </p>
+                </div>
+            </section>
 
             <div class="nav">
                 <a href="{{ site.baseurl }}/page_5.html" class="next-page">Embedding videos and games &nbsp;<i class="fa fa-angle-double-right"></i></a>
