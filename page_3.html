@@ -12,6 +12,101 @@ page_number: 3
 
         <article class="col-sm-9">
             <h1>Create some style</h1>
+            <section>
+                <a name="color"></a>
+                <h2>Color</h2>
+                <p>
+                    Without a CSS stylesheet your web page will just be black text on a white background. But why are all my heading tags
+                    <span style="display:inline-block;padding:0 9px;border-radius:50%;background-color:#990000;color:#FFFFFF;">dark red?</span>
+                    That's because in you did create a CSS file called <strong>style.css</strong>
+                    in the previous session and there specified the color of all h1, h2, h3, h4, h5, h6 tags.
+                </p>
+                <p>
+                    Now we are going to change the color of all of our paragraphs to green.
+                    Open <i>style.css</i> in Notepad++ and add the following lines to the end of the file:
+                </p>
+{% highlight css %}
+p {
+  color: green;
+}
+{% endhighlight %}
+
+                <p>
+                    Here we have chosen to use <i>name</i> of the color, but we can be much more precise by using a <strong>color code</strong>.
+                    Color codes are hexadecimal numbers that represent the amount of <i>red</i>, <i>green</i> and <i>blue</i> in the color.
+                    The best way to choose colors is to use a <a href="http://www.w3schools.com/colors/colors_picker.asp" target="_blank">HTML Color Picker</a>.
+                </p>
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>
+                        Always use American spellings in CSS. In America <strong>colour</strong> is spelt <strong>color</strong>.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <a name="more"></a>
+                <h2>More styling</h2>
+                <p>
+                    Let&rsquo;s try experimenting with a few more paragraph options. Update the CSS definition of the
+                    paragraph &lt;p&gt; tag then refresh your browser to see the changes.
+                </p>
+
+{% highlight css %}
+p {
+  color: #8B0000;
+  background-color: DeepSkyBlue;
+  font-family: 'Verdana';
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  margin: 40px;
+  padding: 20px;
+  border: 6px solid DarkOrange;
+  border-radius: 20px;
+}
+{% endhighlight %}
+
+            </section>
+
+
+            <section>
+                <a name="background"></a>
+                <h2>Background image</h2>
+                <p>
+                    To add a background image to our page, add the following to the <strong>body</strong> section of your style.css file.
+                    Obviously you will want to substitute the image <strong>URL</strong> with with something more appealing from
+                    <a href="https://www.google.com/imghp?gws_rd=ssl" target="_blank">Google Images</a>.
+                </p>
+{% highlight css %}
+body {
+  background-color: #fff100;
+  background-image: url('http://images2.alphacoders.com/242/2420.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+{% endhighlight %}
+            </section>
+
+
+            <section>
+                <a name="background"></a>
+                <h2>Google Fonts</h2>
+                <p>
+                    A great way to enhance your web page is to use <a href="http://www.google.com/fonts" targe="_blank">Google Fonts</a>.
+                    Let's change all our header tags to use a fancy <strong>font</strong> from Google...
+                </p>
+{% highlight css %}
+@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
+
+h2, h3, h4, h5 {
+  font-family: 'Rock Salt', cursive;
+  color: #006400;
+  text-shadow: 3px 3px 4px #AAA;
+}
+{% endhighlight %}
+            </section>
 
             <div class="nav">
                 <a href="{{ site.baseurl }}/page_4.html" class="next-page">Adding more pages &nbsp;<i class="fa fa-angle-double-right"></i></a>

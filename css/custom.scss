@@ -10,7 +10,8 @@
 
 $background-color: #FFFFFF;
 $purple: #363446;
-$red: #ec2524;
+$red-black-back: #ec2524;
+$red: #990000;
 $text-color: #4d5259;
 $link-color: #2724ec;
 $silver: #c0c0c0;
@@ -189,6 +190,10 @@ article {
   p {
     text-align: center;
     padding: 0 30px;
+
+    strong {
+      color: $red-black-back;
+    }
   }
 
   background-color: $purple;
