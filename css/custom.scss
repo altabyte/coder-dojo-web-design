@@ -63,6 +63,16 @@ header {
     &:hover {
       text-shadow: 4px 4px darken($red, 10%);
     }
+
+    a {
+      color: #FFFFFF;
+      text-decoration: none;
+
+      &:hover, &:visited {
+        color: #FFFFFF;
+        text-decoration: none;
+      }
+    }
   }
 
   img.coder-dojo-logo {
