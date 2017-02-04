@@ -152,17 +152,32 @@ pre {
 
 article {
   .nav {
-    margin: 28px 0 40px;
+    a {
+      $button-background-color: #31bae2;
+
+      -webkit-transition: $transition-time ease-in-out;
+      -moz-transition: $transition-time ease-in-out;
+      background-color: $button-background-color;
+      padding: 12px 32px;
+      border-radius: 8px;
+      color: #FFFFFF;
+      box-shadow: 5px 5px 5px #CCCCCC;
+
+      &:hover {
+        text-decoration: none;
+        background-color: darken($button-background-color, 7.5%);
+        box-shadow: 5px 5px 5px #BBBBBB;
+      }
+    }
+
+    margin: 48px 0 40px;
     font-size: 1.2em;
     font-weight: bold;
     font-style: italic;
     text-align: right;
-    -webkit-transition: $transition-time ease-in-out;
-    -moz-transition: $transition-time ease-in-out;
 
-    &:hover {
-      font-size: 1.4em;
-    }
+
+
   }
 }
 
